@@ -2,14 +2,18 @@ import style from './TodoListItem.module.css';
 import { Text } from 'components';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
-export const TodoListItem = ({ text, count }) => {
+export const TodoListItem = ({ text, count, onDelete, id }) => {
   return (
     <div className={style.box}>
       <Text textAlign="center" marginBottom="20">
         TODO #{count}
       </Text>
       <Text>{text}</Text>
-      <button className={style.deleteButton} type="button">
+      <button
+        className={style.deleteButton}
+        type="button"
+        onClick={() => onDelete(id)}
+      >
         <RiDeleteBinLine size={24} />
       </button>
     </div>
