@@ -1,5 +1,13 @@
-import { Text } from 'components';
+import { Text, Form } from 'components';
 
 export const Todos = () => {
-  return <Text textAlign="center">There are no any todos ...</Text>;
+  const onSubmit = text => {
+    console.log(text);
+  };
+  return (
+    <>
+      <Form onSubmit={onSubmit} />
+      <Text textAlign="center">There are no any todos ...</Text>
+    </>
+  );
 };
