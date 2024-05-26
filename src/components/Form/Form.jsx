@@ -10,6 +10,7 @@ export const Form = ({ onSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
     onSubmit(text);
+    setText('');
   };
   return (
     <form className={style.form} onSubmit={handleSubmit}>
